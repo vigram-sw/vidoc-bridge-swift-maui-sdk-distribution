@@ -1,1 +1,101 @@
-.DS_Store
+# Build results
+bin/
+obj/
+build/
+[Bb]uild[Ll]og.*
+project.lock.json
+project.fragment.lock.json
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+*.orig
+
+# VS Code / Rider / VS
+.vscode/
+.idea/
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+# NuGet v3
+*.nuget.props
+*.nuget.targets
+
+# MAUI resources
+Resources/Raw/*.zip
+Resources/Raw/*.tmp
+
+# Platform specific
+# iOS
+*.ipa
+*.dSYM.zip
+*.dSYM
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+*.xcscmblueprint
+*.xcworkspace
+
+# Android
+*.apk
+*.ap_
+*.aab
+*.keystore
+*.jks
+
+# Windows
+*.appx
+*.appxbundle
+*.appxupload
+*.msix
+*.msixbundle
+*.msixupload
+AppPackages/
+BundleArtifacts/
+TestResults/
+
+# macOS
+*.app
+*.dmg
+
+# Logs and crash dumps
+*.log
+*.tlog
+*.DS_Store
+*.swp
+*~
+
+# TFM specific
+[Tt]emp/
+[Tt]est[Rr]esults/
+node_modules/
+*.tmp
+*.bak
+*.old
+
+# Config transforms
+appsettings.*.local.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Maui-specific hidden files
+Platforms/iOS/obj/
+Platforms/Android/obj/
+Platforms/MacCatalyst/obj/
+Platforms/Windows/obj/
+
+# Certificates / provisioning
+*.p12
+*.mobileprovision
+*.provisionprofile
