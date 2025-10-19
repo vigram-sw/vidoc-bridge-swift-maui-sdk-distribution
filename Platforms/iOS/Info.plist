@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+
+  <iOSBundleResources Include="Info.plist"> <Link>Info.plist</Link> </iOSBundleResources>
+  
+    <key>CFBundleDisplayName</key>
+    <string>MyMauiApp</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>YOUR_BUNDLE</string>
+
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <key>UIUserInterfaceStyle</key>
+    <string>Automatic</string>
+
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Приложение использует Bluetooth для подключения к устройствам Vigram</string>
+    
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Приложение использует Bluetooth для подключения к устройствам Vigram</string>
+
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>bluetooth-central</string>
+    </array>
+  </dict>
+</plist>
