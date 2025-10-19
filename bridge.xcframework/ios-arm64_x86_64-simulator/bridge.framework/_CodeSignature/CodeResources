@@ -10,7 +10,7 @@
 		</data>
 		<key>Modules/bridge.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		m8V4D56eGanM+1Ng2TYz0Cb17Iw=
+		aK7R1ynAk8S98ijyCFbh2crhwiA=
 		</data>
 		<key>Modules/bridge.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/bridge.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Tt5MmZ80uloT5wfJYPjlYpvIzLM=
+		RLnK+5fqFn4tbTZuNhZ0FqeOLMw=
 		</data>
 		<key>Modules/bridge.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/bridge.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		m8V4D56eGanM+1Ng2TYz0Cb17Iw=
+		aK7R1ynAk8S98ijyCFbh2crhwiA=
 		</data>
 		<key>Modules/bridge.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/bridge.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		nkymIKiLQ7k2Vc05r9FYrw3ut44=
+		HkVMlnCwJBfJDQ6ZfoSJmc2LXig=
 		</data>
 		<key>Modules/bridge.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -55,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V3CTEcdFSX0zATxHGgcVPUiTVAfRSIyXBvG/4hNUTBg=
+			PRZ3SKNITFaXO/IHjszf6nHWAnT+gYeZ1O+8F865Ats=
 			</data>
 		</dict>
 		<key>Modules/bridge.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -69,7 +69,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XhgrMEy0iwI1CPV/g5s43u9mB5QsNU/dDY7i1Hz4QKM=
+			qb86vhVqYsKCt/ML9XAZtNLU3DO3Tp8xO6ifsqZavco=
 			</data>
 		</dict>
 		<key>Modules/bridge.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V3CTEcdFSX0zATxHGgcVPUiTVAfRSIyXBvG/4hNUTBg=
+			PRZ3SKNITFaXO/IHjszf6nHWAnT+gYeZ1O+8F865Ats=
 			</data>
 		</dict>
 		<key>Modules/bridge.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -104,7 +104,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kcdHWA/uu/uTj+Ns7BiQhMNKAJ9zcapaxhv6ViuU4QA=
+			NC+zapeAljHu0hZINVd3m3OBSEHmX+CJPPCz3JP1rP4=
 			</data>
 		</dict>
 		<key>Modules/bridge.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>

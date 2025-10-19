@@ -902,49 +902,42 @@
     {
       "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
       "kind": "StringLiteral",
-      "offset": 2584,
-      "length": 52,
-      "value": "\"[PeripheralBridge] 🔹 Observing NMEA messages...\""
-    },
-    {
-      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
-      "kind": "StringLiteral",
-      "offset": 2847,
+      "offset": 1910,
       "length": 5,
       "value": "\"GGA\""
     },
     {
       "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
       "kind": "StringLiteral",
-      "offset": 2947,
+      "offset": 2010,
       "length": 5,
       "value": "\"GST\""
     },
     {
       "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
       "kind": "StringLiteral",
-      "offset": 3047,
+      "offset": 2110,
       "length": 5,
       "value": "\"TXT\""
     },
     {
       "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
       "kind": "StringLiteral",
-      "offset": 3216,
+      "offset": 2161,
       "length": 5,
       "value": "\"raw\""
     },
     {
       "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
       "kind": "StringLiteral",
-      "offset": 3308,
+      "offset": 2253,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
       "kind": "BooleanLiteral",
-      "offset": 7135,
+      "offset": 5863,
       "length": 5,
       "value": "false"
     }
