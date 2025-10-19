@@ -1,0 +1,952 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "bridge",
+    "printedName": "bridge",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_initialize",
+        "printedName": "vigram_initialize(_:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UnsafePointer",
+            "printedName": "Swift.UnsafePointer<Swift.Int8>",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int8",
+                "printedName": "Swift.Int8",
+                "usr": "s:s4Int8V"
+              }
+            ],
+            "usr": "s:SP"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Bool) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_initialize::",
+        "mangledName": "$s6bridge17vigram_initializeyySPys4Int8VG_ySbXCtF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_is_token_valid",
+        "printedName": "vigram_is_token_valid()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Bool",
+            "printedName": "Swift.Bool",
+            "usr": "s:Sb"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_is_token_valid",
+        "mangledName": "$s6bridge21vigram_is_token_validSbyF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreBluetooth",
+        "printedName": "CoreBluetooth",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_bluetooth_start_scan",
+        "printedName": "vigram_bluetooth_start_scan(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.UnsafePointer<Swift.Int8>?, Swift.UnsafePointer<Swift.Int8>?) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(Swift.UnsafePointer<Swift.Int8>?, Swift.UnsafePointer<Swift.Int8>?)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UnsafePointer<Swift.Int8>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnsafePointer",
+                        "printedName": "Swift.UnsafePointer<Swift.Int8>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int8",
+                            "printedName": "Swift.Int8",
+                            "usr": "s:s4Int8V"
+                          }
+                        ],
+                        "usr": "s:SP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.UnsafePointer<Swift.Int8>?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UnsafePointer",
+                        "printedName": "Swift.UnsafePointer<Swift.Int8>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int8",
+                            "printedName": "Swift.Int8",
+                            "usr": "s:s4Int8V"
+                          }
+                        ],
+                        "usr": "s:SP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_bluetooth_start_scan:",
+        "mangledName": "$s6bridge27vigram_bluetooth_start_scanyyySPys4Int8VGSg_AFtXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_bluetooth_stop_scan",
+        "printedName": "vigram_bluetooth_stop_scan()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_bluetooth_stop_scan",
+        "mangledName": "$s6bridge26vigram_bluetooth_stop_scanyyF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_bluetooth_connect",
+        "printedName": "vigram_bluetooth_connect(_:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "UnsafePointer",
+            "printedName": "Swift.UnsafePointer<Swift.Int8>",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int8",
+                "printedName": "Swift.Int8",
+                "usr": "s:s4Int8V"
+              }
+            ],
+            "usr": "s:SP"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Int32) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_bluetooth_connect::",
+        "mangledName": "$s6bridge24vigram_bluetooth_connectyySPys4Int8VG_ys5Int32VXCtF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_bluetooth_observe_state",
+        "printedName": "vigram_bluetooth_observe_state(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Int32) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_bluetooth_observe_state:",
+        "mangledName": "$s6bridge30vigram_bluetooth_observe_stateyyys5Int32VXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_bluetooth_disconnect",
+        "printedName": "vigram_bluetooth_disconnect()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_bluetooth_disconnect",
+        "mangledName": "$s6bridge27vigram_bluetooth_disconnectyyF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_laser_init",
+        "printedName": "vigram_laser_init()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_laser_init",
+        "mangledName": "$s6bridge17vigram_laser_inityyF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_laser_turn_on",
+        "printedName": "vigram_laser_turn_on(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int",
+            "printedName": "Swift.Int",
+            "usr": "s:Si"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_laser_turn_on:",
+        "mangledName": "$s6bridge20vigram_laser_turn_onyySiF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreBluetooth",
+        "printedName": "CoreBluetooth",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Import",
+        "name": "VigramSDK",
+        "printedName": "VigramSDK",
+        "declKind": "Import",
+        "moduleName": "bridge"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_start",
+        "printedName": "vigram_peripheral_start()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_start",
+        "mangledName": "$s6bridge23vigram_peripheral_startyyF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_stop",
+        "printedName": "vigram_peripheral_stop()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_stop",
+        "mangledName": "$s6bridge22vigram_peripheral_stopyyF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_observe_nmea",
+        "printedName": "vigram_peripheral_observe_nmea(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.UnsafePointer<Swift.Int8>) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafePointer",
+                "printedName": "Swift.UnsafePointer<Swift.Int8>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:SP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_observe_nmea:",
+        "mangledName": "$s6bridge30vigram_peripheral_observe_nmeayyySPys4Int8VGXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_observe_configuration_state",
+        "printedName": "vigram_peripheral_observe_configuration_state(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Int32, Swift.UnsafePointer<Swift.Int8>) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(Swift.Int32, Swift.UnsafePointer<Swift.Int8>)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnsafePointer",
+                    "printedName": "Swift.UnsafePointer<Swift.Int8>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int8",
+                        "printedName": "Swift.Int8",
+                        "usr": "s:s4Int8V"
+                      }
+                    ],
+                    "usr": "s:SP"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_observe_configuration_state:",
+        "mangledName": "$s6bridge45vigram_peripheral_observe_configuration_stateyyys5Int32V_SPys4Int8VGtXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_observe_state",
+        "printedName": "vigram_peripheral_observe_state(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Int32) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_observe_state:",
+        "mangledName": "$s6bridge31vigram_peripheral_observe_stateyyys5Int32VXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_send",
+        "printedName": "vigram_peripheral_send(_:_:_:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Optional",
+            "printedName": "Swift.UnsafePointer<Swift.UInt8>?",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafePointer",
+                "printedName": "Swift.UnsafePointer<Swift.UInt8>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:SP"
+              }
+            ],
+            "usr": "s:Sq"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int32",
+            "printedName": "Swift.Int32",
+            "usr": "s:s5Int32V"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "Int32",
+            "printedName": "Swift.Int32",
+            "usr": "s:s5Int32V"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Int32) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_send::::",
+        "mangledName": "$s6bridge22vigram_peripheral_sendyySPys5UInt8VGSg_s5Int32VAHyAHXCtF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl",
+          "RawDocComment"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_request_battery",
+        "printedName": "vigram_peripheral_request_battery(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.Int32) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_request_battery:",
+        "mangledName": "$s6bridge33vigram_peripheral_request_batteryyyys5Int32VXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "vigram_peripheral_request_version",
+        "printedName": "vigram_peripheral_request_version(_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeFunc",
+            "name": "Function",
+            "printedName": "(Swift.UnsafePointer<Swift.Int8>) -> ()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafePointer",
+                "printedName": "Swift.UnsafePointer<Swift.Int8>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "usr": "s:SP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)vigram_peripheral_request_version:",
+        "mangledName": "$s6bridge33vigram_peripheral_request_versionyyySPys4Int8VGXCF",
+        "moduleName": "bridge",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/models\/GgaMessageDTO.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1482,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/models\/GstMessageDTO.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1756,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/models\/TxtMessageDTO.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1485,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/BluetoothBridge.swift",
+      "kind": "Dictionary",
+      "offset": 492,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 2584,
+      "length": 52,
+      "value": "\"[PeripheralBridge] 🔹 Observing NMEA messages...\""
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 2847,
+      "length": 5,
+      "value": "\"GGA\""
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 2947,
+      "length": 5,
+      "value": "\"GST\""
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 3047,
+      "length": 5,
+      "value": "\"TXT\""
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 3216,
+      "length": 5,
+      "value": "\"raw\""
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 3308,
+      "length": 9,
+      "value": "\"UNKNOWN\""
+    },
+    {
+      "filePath": "\/Users\/iaroslav\/Desktop\/ViGram_Bridge\/bridge\/bridge\/Sources\/PeripheralBridge.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7135,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}
