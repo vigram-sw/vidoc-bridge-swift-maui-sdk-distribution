@@ -1,12 +1,31 @@
 # VigramSDK
-v1.1.0
+v2.0.0-rc.1
 
-###What’s New in This Version
-- Added NTRIP Service for GNSS correction streams.
-- Updated Bluetooth and Peripheral services with
-- improved state and NMEA observation methods.
-- Improved SDK initialization and device connection flow.
+### What’s New in This Version
 
+- Updated bundled iOS framework to `2.0.0-rc.1`.
+- Rebuilt `bridge.xcframework` against SDK `2.0.0-rc.1`.
+- Updated `VigramSDK.dll` to version `2.0.0.0`.
+- Authentication token is now optional in the MAUI wrapper.
+- NTRIP now supports separate HTTPS flags for mountpoints/correction stream.
+- NTRIP `StartTask` now requires explicit `autoReconnect`.
+- Added NTRIP reconnect states: `ReconnectScheduled`, `Reconnecting`, `ReconnectRestored`, `ReconnectFailed`.
+- Added SDK 2.0 error/reason models: `SinglePointRecordingError`, `PeripheralError`, `GpsDisconnectReason`.
+
+### API Changes
+
+- `AuthenticationService` accepts an optional token.
+- `NtripConnectionInformation` now includes `ForceHttps` and `ForceHttpsMountpoints`.
+- `NtripService.StartTask(...)` now requires explicit `autoReconnect`.
+- Old `StartTask(...)` calls without `autoReconnect` will not compile.
+- `ConfigurationState` now includes `ConnectionLostDuringConfiguration`.
+
+### Platform Support
+
+This distribution includes slices for real iOS devices and iOS Simulator:
+
+- `bridge.xcframework`: `ios-arm64`, `ios-arm64_x86_64-simulator`
+- `VigramSDK.xcframework`: `ios-arm64`, `ios-arm64_x86_64-simulator`
 
 ## Prepare the files
 
@@ -54,14 +73,16 @@ Open your `.csproj` file and add the following items:
 ```
 
 ## Initialize the SDK
-Before using any services, initialize the SDK with your API token:
+
+Before using any services, initialize the SDK. The API token is optional.
 
 ```
-var auth = VigramSdk.AuthenticationService("YOUR_API_TOKEN");
+string? token = "YOUR_API_TOKEN"; // optional: use null if no token is needed
+var auth = VigramSdk.AuthenticationService(token);
 auth.Initialize(
-    onSuccess: ()=>
+    onSuccess: () =>
     {
-    	Console.WriteLine("Vigram SDK ready");
+        Console.WriteLine("Vigram SDK ready");
     },
     onError: msg =>
     {
@@ -70,8 +91,10 @@ auth.Initialize(
 );
 ```
 
-##Using the services
+## Using the services
+
 #### Bluetooth Service
+
 ```
 var bluetooth = VigramSdk.BluetoothService();
 
@@ -97,7 +120,9 @@ bluetooth.Connect("DEVICE_UUID",
 );
 
 ```
+
 #### Peripheral Service
+
 ```
 var peripheral = VigramSdk.PeripheralService();
 peripheral.Start("DEVICE_UUID");
@@ -153,7 +178,9 @@ var connectionInfo = new NtripConnectionInformation
     Hostname = "ntrip.example.com",
     Port = 2101,
     Username = "user",
-    Password = "pass"
+    Password = "pass",
+    ForceHttps = false,
+    ForceHttpsMountpoints = false
 };
 
 // Get available mountpoints from the NTRIP caster
@@ -167,7 +194,10 @@ ntrip.GetMountpoints(connectionInfo,
 );
 
 // Connect to a selected mountpoint
-ntrip.StartTask(connectionInfo, "MOUNT_NAME",
+ntrip.StartTask(
+    connectionInfo,
+    "MOUNT_NAME",
+    autoReconnect: true,
     onSuccess: () =>
     {
         // Observe NTRIP connection state
@@ -185,3 +215,19 @@ ntrip.Reconnect();
 
 ```
 
+NTRIP state values:
+
+- `NotConnected`
+- `Setup`
+- `Preparing`
+- `Ready`
+- `Cancelled`
+- `UnknownError`
+- `Waiting`
+- `Failed`
+- `SocketError`
+- `ReconnectScheduled`
+- `Reconnecting`
+- `ReconnectRestored`
+- `ReconnectFailed`
+- `Unknown`
