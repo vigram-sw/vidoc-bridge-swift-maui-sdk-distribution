@@ -1,11 +1,24 @@
 # VigramSDK
-v1.1.0
+v2.0.0-rc.1
 
-###What’s New in This Version
-- Added NTRIP Service for GNSS correction streams.
-- Updated Bluetooth and Peripheral services with
-- improved state and NMEA observation methods.
-- Improved SDK initialization and device connection flow.
+### What’s New in This Version
+
+- Updated bundled iOS framework to `2.0.0-rc.1`.
+- Rebuilt `bridge.xcframework` against SDK `2.0.0-rc.1`.
+- Updated `VigramSDK.dll` to version `2.0.0.0`.
+- Authentication token is now optional in the MAUI wrapper.
+- NTRIP now supports separate HTTPS flags for mountpoints/correction stream.
+- NTRIP `StartTask` now requires explicit `autoReconnect`.
+- Added NTRIP reconnect states: `ReconnectScheduled`, `Reconnecting`, `ReconnectRestored`, `ReconnectFailed`.
+- Added SDK 2.0 error/reason models: `SinglePointRecordingError`, `PeripheralError`, `GpsDisconnectReason`.
+
+### API Changes
+
+- `AuthenticationService` accepts an optional token.
+- `NtripConnectionInformation` now includes `ForceHttps` and `ForceHttpsMountpoints`.
+- `NtripService.StartTask(...)` now requires explicit `autoReconnect`.
+- Old `StartTask(...)` calls without `autoReconnect` will not compile.
+- `ConfigurationState` now includes `ConnectionLostDuringConfiguration`.
 
 
 ## Prepare the files
@@ -70,7 +83,26 @@ auth.Initialize(
 );
 ```
 
-##Using the services
+### Keeping your token out of git
+
+This demo reads the token from `DemoConfig.cs`, which ships with the
+placeholder `YOUR_TOKEN`. Rather than editing that file - a tracked file is
+how tokens end up in commits - create `DemoConfig.local.cs` next to it:
+
+```csharp
+namespace MyMauiApp;
+
+internal static partial class DemoConfig
+{
+    static DemoConfig() => Token = "your-token-here";
+}
+```
+
+`DemoConfig.local.cs` is listed in `.gitignore`, so it stays on your machine.
+Without it the project still builds and runs - authentication simply fails
+with the placeholder token.
+
+## Using the services
 #### Bluetooth Service
 ```
 var bluetooth = VigramSdk.BluetoothService();
@@ -167,7 +199,7 @@ ntrip.GetMountpoints(connectionInfo,
 );
 
 // Connect to a selected mountpoint
-ntrip.StartTask(connectionInfo, "MOUNT_NAME",
+ntrip.StartTask(connectionInfo, "MOUNT_NAME", autoReconnect: true,
     onSuccess: () =>
     {
         // Observe NTRIP connection state

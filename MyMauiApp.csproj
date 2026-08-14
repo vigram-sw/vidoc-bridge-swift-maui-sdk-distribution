@@ -6,12 +6,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 
-    <ApplicationId>YOUR_BUNDLE</ApplicationId>
+    <!-- No ApplicationId here on purpose: the bundle id comes from the Info.plist
+         in the project root and nothing else. Declaring it here too only creates
+         a second value that silently disagrees with the one actually used. -->
     <ApplicationTitle>MyMauiApp</ApplicationTitle>
-
-    <ApplicationManifest>Platforms/iOS/Info.plist</ApplicationManifest>
-    <EnableDefaultInfoPlist>false</EnableDefaultInfoPlist>
-    <GenerateInfoPlistFile>false</GenerateInfoPlistFile>
 
     <SupportedOSPlatformVersion>14.0</SupportedOSPlatformVersion>
   </PropertyGroup>
@@ -52,10 +50,6 @@
     <MauiXaml Update="MainPage.xaml" Generator="MSBuild:UpdateDesignTimeXaml" SubType="Designer" />
   </ItemGroup>
 
-  <ItemGroup>
-    <BundleResource Include="Platforms/iOS/Info.plist" />
-  </ItemGroup>
-
   <PropertyGroup Condition="'$(Platform)' == 'iPhoneSimulator'">
     <CodesignOnBuild>false</CodesignOnBuild>
   </PropertyGroup>
@@ -64,11 +58,5 @@
     <CodesignOnBuild>true</CodesignOnBuild>
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
-
-  <Target Name="Run">
-    <Exec
-      Command="xcrun simctl install booted bin/iPhoneSimulator/Debug/net8.0-ios/iossimulator-arm64/MyMauiApp.app" />
-    <Exec Command="xcrun simctl launch booted com.vigram.sdkgh1" />
-  </Target>
 
 </Project>

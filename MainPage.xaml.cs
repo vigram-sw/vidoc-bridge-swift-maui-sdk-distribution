@@ -191,7 +191,7 @@ namespace MyMauiApp
 
 #if IOS
             // ----------------- Vigram SDK Authentication -----------------
-            var auth = VigramSdk.AuthenticationService("YOUR_TOKEN");
+            var auth = VigramSdk.AuthenticationService(DemoConfig.Token);
             auth.Initialize(
                 onSuccess: () =>
                 {
@@ -451,6 +451,7 @@ namespace MyMauiApp
             _txtLabel.Text = "TXT: -";
             _batteryLabel.Text = "Battery: -";
             _versionLabel.Text = "Version: -";
+            _ntripStateLabel.Text = "NTRIP State: -";
         }
         #endregion
 
@@ -687,7 +688,7 @@ namespace MyMauiApp
             });
 
             // Start NTRIP task
-            _ntripService.StartTask(_connectionInfo, mount,
+            _ntripService.StartTask(_connectionInfo, mount, autoReconnect: true,
             () =>
             {
                 // Observe NTRIP state changes

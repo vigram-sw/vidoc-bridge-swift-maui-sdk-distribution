@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
-// swift-module-flags: -target arm64-apple-ios26.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name bridge
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios26.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name bridge
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Combine
 import CoreBluetooth
 import Swift
@@ -11,11 +11,9 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 extension VigramSDK.StateNtripConnection {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var asCodeAndText: (Swift.Int32, Swift.String?) {
     get
   }
-  #endif
 }
 extension Swift.Int {
   public func toCameraPosition() -> UIKit.UIDevice.CameraPosition
@@ -23,7 +21,7 @@ extension Swift.Int {
 public typealias AuthSuccessCallback = @convention(c) (Swift.Bool) -> Swift.Void
 public typealias AuthErrorCallback = @convention(c) (Swift.UnsafePointer<Swift.CChar>) -> Swift.Void
 @_cdecl("vigram_initialize")
-public func vigram_initialize(_ tokenPtr: Swift.UnsafePointer<Swift.CChar>, _ onSuccess: bridge.AuthSuccessCallback, _ onError: bridge.AuthErrorCallback)
+public func vigram_initialize(_ tokenPtr: Swift.UnsafePointer<Swift.CChar>?, _ onSuccess: bridge.AuthSuccessCallback, _ onError: bridge.AuthErrorCallback)
 @_cdecl("vigram_is_token_valid")
 public func vigram_is_token_valid() -> Swift.Bool
 public typealias PeripheralSuccessCallback = @convention(c) () -> Swift.Void
@@ -45,30 +43,25 @@ public func vigram_bluetooth_disconnect()
 public typealias LaserCallback = @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
 @_cdecl("vigram_laser_init")
 public func vigram_laser_init()
-#if compiler(>=5.3) && $NonescapableTypes
 @_cdecl("vigram_laser_turn_on")
 public func vigram_laser_turn_on(_ position: Swift.Int32, _ callback: @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
 @_cdecl("vigram_laser_turn_off")
 public func vigram_laser_turn_off(_ position: Swift.Int32, _ callback: @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
-#endif
+public typealias LogErrorCallback = @convention(c) (Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
+@_cdecl("vigram_log_enable")
+public func vigram_log_enable(_ pathCStr: Swift.UnsafePointer<Swift.CChar>, _ mode: Swift.Int32, _ onError: bridge.LogErrorCallback?) -> Swift.Bool
+@_cdecl("vigram_log_disable")
+public func vigram_log_disable()
 public typealias MountpointsSuccessCallback = @convention(c) (Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
 public typealias MountpointsErrorCallback = @convention(c) (Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
 public typealias NtripStartCallbackWithError = @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
 public typealias NtripStateCallback = @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
-#if compiler(>=5.3) && $NonescapableTypes
 @_cdecl("vigram_ntrip_mountpoints")
-public func vigram_ntrip_mountpoints(_ hostnameCStr: Swift.UnsafePointer<Swift.CChar>, _ port: Swift.Int32, _ usernameCStr: Swift.UnsafePointer<Swift.CChar>, _ passwordCStr: Swift.UnsafePointer<Swift.CChar>, _ onSuccess: bridge.MountpointsSuccessCallback?, _ onError: bridge.MountpointsErrorCallback?)
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
+public func vigram_ntrip_mountpoints(_ hostnameCStr: Swift.UnsafePointer<Swift.CChar>, _ port: Swift.Int32, _ usernameCStr: Swift.UnsafePointer<Swift.CChar>, _ passwordCStr: Swift.UnsafePointer<Swift.CChar>, _ forceHttps: Swift.Int32, _ forceHttpsMountpoints: Swift.Int32, _ onSuccess: bridge.MountpointsSuccessCallback?, _ onError: bridge.MountpointsErrorCallback?)
 @_cdecl("vigram_ntrip_start_task")
-public func vigram_ntrip_start_task(_ hostnameCStr: Swift.UnsafePointer<Swift.CChar>, _ port: Swift.Int32, _ usernameCStr: Swift.UnsafePointer<Swift.CChar>, _ passwordCStr: Swift.UnsafePointer<Swift.CChar>, _ mountCStr: Swift.UnsafePointer<Swift.CChar>, _ callback: @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
-#endif
-#if compiler(>=5.3) && $NonescapableTypes
+public func vigram_ntrip_start_task(_ hostnameCStr: Swift.UnsafePointer<Swift.CChar>, _ port: Swift.Int32, _ usernameCStr: Swift.UnsafePointer<Swift.CChar>, _ passwordCStr: Swift.UnsafePointer<Swift.CChar>, _ mountCStr: Swift.UnsafePointer<Swift.CChar>, _ forceHttps: Swift.Int32, _ forceHttpsMountpoints: Swift.Int32, _ autoReconnect: Swift.Int32, _ callback: @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
 @_cdecl("vigram_ntrip_observe_state")
 public func vigram_ntrip_observe_state(_ callback: @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
-#endif
 @_cdecl("vigram_ntrip_reconnect")
 public func vigram_ntrip_reconnect()
 @_cdecl("vigram_ntrip_disconnect")
@@ -90,18 +83,12 @@ public func vigram_peripheral_observe_nmea(_ callback: @convention(c) (Swift.Uns
 public func vigram_peripheral_observe_configuration_state(_ callback: @convention(c) (Swift.Int32, Swift.UnsafePointer<Swift.CChar>) -> Swift.Void)
 @_cdecl("vigram_peripheral_observe_state")
 public func vigram_peripheral_observe_state(_ callback: @convention(c) (Swift.Int32) -> Swift.Void)
-#if compiler(>=5.3) && $NonescapableTypes
 @_cdecl("vigram_peripheral_send")
 public func vigram_peripheral_send(_ dataPtr: Swift.UnsafePointer<Swift.UInt8>?, _ length: Swift.Int32, _ chunkSize: Swift.Int32, _ callback: @convention(c) (Swift.Int32) -> Swift.Void)
-#endif
 @_cdecl("vigram_peripheral_request_battery")
 public func vigram_peripheral_request_battery(_ callback: @convention(c) (Swift.Int32) -> Swift.Void)
-#if compiler(>=5.3) && $NonescapableTypes
 @_cdecl("vigram_peripheral_request_version")
 public func vigram_peripheral_request_version(_ callback: @convention(c) (Swift.UnsafePointer<Swift.CChar>?, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
-#endif
 public typealias CameraOffsetCallback = @convention(c) (Swift.Double, Swift.Double, Swift.Double, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void
-#if compiler(>=5.3) && $NonescapableTypes
 @_cdecl("vigram_camera_antenna_offset")
 public func vigram_camera_antenna_offset(_ position: Swift.Int, _ callback: @convention(c) (Swift.Double, Swift.Double, Swift.Double, Swift.UnsafePointer<Swift.CChar>?) -> Swift.Void)
-#endif
