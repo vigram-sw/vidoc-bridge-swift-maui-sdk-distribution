@@ -99,3 +99,6 @@ Platforms/Windows/obj/
 *.p12
 *.mobileprovision
 *.provisionprofile
+
+# Local demo configuration - keeps real tokens out of git
+DemoConfig.local.cs
